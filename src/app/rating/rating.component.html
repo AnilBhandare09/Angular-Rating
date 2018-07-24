@@ -1,26 +1,21 @@
-<mat-card>
-  <mat-card-content>
-    <mat-card-title>{{type | uppercase}}</mat-card-title>
-    <div *ngIf="type == 'dropdown'" class="dropdown-block">
-      <mat-select placeholder="Select rating" [(ngModel)]="_value" (ngModelChange)="update($event,_value)" [ngClass]="{'disabled': !input}">
-        <mat-option *ngFor="let item of items let i = index" [value]="item">
-          {{item}} {{titleArray[i]}}
-        </mat-option>
-      </mat-select>
-    </div>
-    <div *ngIf="type != 'dropdown'" [class]="theme">
-      <ul class="rating-list">
-        <li *ngFor="let item of items; let i = index" (click)="update($event,item)" [ngClass]="{'disabled': !input}">
-          <span *ngIf="type == 'number'; else elseBlock" class="rating-icon" [style.background-color]="indxValue >= i ? rateColor : ''">
-            <div [title]="titleArray[i] || item" class="rating-number">{{item}}</div>
-          </span>
-          <ng-template #elseBlock>
-            <span class="rating-icon" [style.color]="indxValue >= i ? rateColor : ''">
-              <i [title]="titleArray[i] || item" class="material-icons">{{type}}</i>
-            </span>
-          </ng-template>
-        </li>
-      </ul>
-    </div>
-  </mat-card-content>
-</mat-card>
+<div *ngIf="type == 'dropdown'" class="dropdown-block">
+  <mat-select placeholder="Select rating" [(ngModel)]="_value" (ngModelChange)="update($event,_value)" [ngClass]="{'disabled': !input}">
+    <mat-option *ngFor="let item of items let i = index" [value]="item">
+      {{item}} {{titleArray[i]}}
+    </mat-option>
+  </mat-select>
+</div>
+<div *ngIf="type != 'dropdown'" [class]="theme">
+  <ul class="rating-list">
+    <li *ngFor="let item of items; let i = index" (click)="update($event,item)" [ngClass]="{'disabled': !input}">
+      <span *ngIf="type == 'number'; else elseBlock" class="rating-icon" [style.background-color]="indxValue >= i ? rateColor : ''">
+        <div [title]="titleArray[i] || item" class="rating-number">{{item}}</div>
+      </span>
+      <ng-template #elseBlock>
+        <span class="rating-icon" [style.color]="indxValue >= i ? rateColor : ''">
+          <i [title]="titleArray[i] || item" class="material-icons">{{type}}</i>
+        </span>
+      </ng-template>
+    </li>
+  </ul>
+</div>

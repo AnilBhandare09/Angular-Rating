@@ -1,20 +1,28 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<mat-card>
+  <mat-card-content>
+    <!-- For Star Icon -->
+    <app-rating [(ngModel)]="rating.value" [theme]="rating.theme" [title]="rating.title" [color]="rating.color" [type]="rating.type"
+      [max]="rating.max" (rateChange)="onFaoRate($event)" [min]="rating.min" [step]="rating.step" [input]="rating.input"></app-rating>
+    
+    <!-- For Thumbs Up -->
+      <app-rating [(ngModel)]="ratingThumsUp.value" [theme]="ratingThumsUp.theme" [title]="ratingThumsUp.title" [color]="ratingThumsUp.color"
+      [type]="ratingThumsUp.type" [max]="ratingThumsUp.max" (rateChange)="onThumsUp($event)" [min]="ratingThumsUp.min" [step]="ratingThumsUp.step"
+      [input]="ratingThumsUp.input"></app-rating>
+   
+        <!-- For Thumbs Down -->
+      <app-rating [(ngModel)]="ratingThumsDown.value" [theme]="ratingThumsDown.theme" [title]="ratingThumsDown.title" [color]="ratingThumsDown.color"
+      [type]="ratingThumsDown.type" [max]="ratingThumsDown.max" (rateChange)="onThumsDown($event)" [min]="ratingThumsDown.min"
+      [step]="ratingThumsDown.step" [input]="ratingThumsDown.input"></app-rating>
+  
+    <!-- For Number Rating -->
+      <app-rating [(ngModel)]="ratingNumber.value" [theme]="ratingNumber.theme" [format]="ratingNumber.format" [title]="ratingNumber.title"
+      [color]="ratingNumber.color" [type]="ratingNumber.type" [max]="ratingNumber.max" (rateChange)="onRatingNumber($event)"
+      [min]="ratingNumber.min" [step]="ratingNumber.step" [input]="ratingNumber.input"></app-rating>
+  
+      <!-- For Dropdown Rating -->
+    <app-rating [(ngModel)]="ratingDrop.value" [theme]="ratingNumber.theme" [title]="ratingDrop.title" [color]="ratingDrop.color"
+      [type]="ratingDrop.type" [max]="ratingDrop.max" (rateChange)="onRatingDrop($event)" [min]="ratingDrop.min" [step]="ratingDrop.step"
+      [input]="ratingDrop.input"></app-rating>
+      
+  </mat-card-content>
+</mat-card>

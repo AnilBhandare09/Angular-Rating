@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output, SimpleChanges, OnChanges, forwardRef, Renderer2, ElementRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as _ from 'underscore';
-import { SortedIndex } from '../util/SupportUtil';
+// import { SortedIndex } from '../util/SupportUtil';
 
 const customValueProvider = {
   provide: NG_VALUE_ACCESSOR,
@@ -21,9 +21,9 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
   _value: number;
   propagateChange: any = () => { };
   @Input() ratingObject: any;
-  @Input() max = 25;
-  @Input() min = 5;
-  @Input() step = 5;
+  @Input() max = 10;
+  @Input() min = 1;
+  @Input() step = 1;
   @Input() type = 'star';;
   @Input() title;
   @Input() color = ['green'];
@@ -39,9 +39,9 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit() {
     this.type = !this.type ? 'star' : this.type;
-    this.max = !this.max ? 25 : this.max;
-    this.min = !this.min ? 5 : this.min;
-    this.step = !this.step ? 5 : this.step;
+    this.max = !this.max ? 10 : this.max;
+    this.min = !this.min ? 1 : this.min;
+    this.step = !this.step ? 1 : this.step;
     this.color = !this.color || !this.color.length ? ['green'] : this.color;
     this.createRating();
     this.getTitle(this.title);
@@ -137,6 +137,12 @@ export function checkRgb (color) {
           b = parseInt(color.slice(4,6), 16);
       return 'rgb('+ r +','+ g +','+ b +')';
   }
+}
+
+export function SortedIndex(valueArray: number[], value: number): number {
+  return valueArray.reduce(function (prev, curr) {
+      return (Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev);
+  });
 }
 
 export interface RatingFieldConfig {
