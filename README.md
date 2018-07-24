@@ -28,7 +28,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 [title]: Titles array. array length should be equal to the max value, each index represents the rating title, default [].
 
-[format]: A format indicating if rating is in `percentage` then format is percentage, default is `value`.
+[format]: A format indicating if format is 'percentage' then rating value is in percentage, default is `value`.
 
 (rateChange): An event fired when a user selects a new rating.
 
