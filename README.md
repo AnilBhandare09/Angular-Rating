@@ -12,23 +12,23 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Rating  options (inputs):
 
-[ngModel]: Current rating. default undefined.
+[ngModel]: Current rating.
 
-[type]: Type of rating that can be dropdown,number and any Mat Icon name, default star 
+[type]: Type of rating that can be dropdown,number and any Mat Icon name ex thumb_up or thumb_down, default star 
 
 [max]: Maximal rating that can be given using this widget, default 5
 
 [min]: Minimum rating that can be given using this widget, default 1
 
-[input]: A flag indicating if rating can be updated, default false
+[input]: Allow user to give rating(editable) otherwise it will be read only. default false
 
 [theme]: Theme class.theme number-block for number rating and icon-block for icon.
 
-[step]: step class.step that can be range of min and max,default .
+[step]: step class.step that can be range of min and max.
 
 [title]: Titles array. array length should be equal to the max value, each index represents the rating title, default [].
 
-[format]: .A format indicating if rating is in percentage then format is percentage, default value.
+[format]: A format indicating if rating is in percentage then format is percentage, default is value.
 
 (rateChange): An event fired when a user selects a new rating.
 
