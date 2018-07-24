@@ -10,6 +10,33 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Rating  options (inputs):
+
+[ngModel]: Current rating. default undefined.
+
+[type]: Type of rating that can be dropdown,number and any Mat Icon name, default star 
+
+[max]: Maximal rating that can be given using this widget, default 5
+
+[min]: Minimum rating that can be given using this widget, default 1
+
+[input]: A flag indicating if rating can be updated, default false
+
+[theme]: Theme class.theme number-block for number rating and icon-block for icon.
+
+[step]: step class.step that can be range of min and max,default .
+
+[title]: Titles array. array length should be equal to the max value, each index represents the rating title, default [].
+
+[format]: .A format indicating if rating is in percentage then format is percentage, default value.
+
+(rateChange): An event fired when a user selects a new rating.
+
+
+## Thumbs Icon rating example:
+
+<app-rating [(ngModel)]="ratingThumsUp.value" [theme]="ratingThumsUp.theme" [title]="ratingThumsUp.title" [color]="ratingThumsUp.color" [type]="ratingThumsUp.type" [max]="ratingThumsUp.max" (rateChange)="onThumsUp($event)" [min]="ratingThumsUp.min" [step]="ratingThumsUp.step" [input]="ratingThumsUp.input"></app-rating>
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
