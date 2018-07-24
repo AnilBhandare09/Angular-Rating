@@ -1,0 +1,50 @@
+.number-block{
+    ul.rating-list{
+        li{
+            list-style-type: none;
+            display: inline-block;
+            .rating-icon {
+                width: 33px;
+                display: inline-block;
+                border: 1px solid gray;
+                border-radius: 50%;
+                height: 33px;
+                margin-right: 10px;
+                cursor: pointer;
+                background-color: #cccccc;
+                color: #fff;
+                border-color: #cccccc;
+                .rating-number {
+                    margin: 0 auto;
+                    display: table;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.icon-block{
+    ul.rating-list{
+        li{
+            list-style-type: none;
+            display: inline-block;
+            .rating-icon {
+                height: 33px;
+                margin-right: 10px;
+                color:  gray;
+                cursor: pointer;
+                .rating-number {
+                    margin: 0 auto;
+                    display: table;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.disabled {
+    pointer-events:none; 
+    opacity:0.6;         
+}
