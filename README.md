@@ -35,7 +35,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Thumbs Icon rating example:
 
-<app-rating [(ngModel)]="ratingThumsUp.value" [theme]="ratingThumsUp.theme" [title]="ratingThumsUp.title" [color]="ratingThumsUp.color" [type]="ratingThumsUp.type" [max]="ratingThumsUp.max" (rateChange)="onThumsUp($event)" [min]="ratingThumsUp.min" [step]="ratingThumsUp.step" [input]="ratingThumsUp.input"></app-rating>
+`<app-rating [(ngModel)]="ratingThumsUp.value" [theme]="ratingThumsUp.theme" [title]="ratingThumsUp.title" [color]="ratingThumsUp.color" [type]="ratingThumsUp.type" [max]="ratingThumsUp.max" (rateChange)="onThumsUp($event)" [min]="ratingThumsUp.min" [step]="ratingThumsUp.step" [input]="ratingThumsUp.input"></app-rating>`
 
 ## Build
 
