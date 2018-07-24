@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Rating  options (inputs):
 
-[ngModel]: Current rating.
+[ngModel]: Current rating. It is required.
 
 [type]: Type of rating that can be dropdown,number and any Mat Icon name ex thumb_up or thumb_down, default star 
 
