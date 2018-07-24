@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RatingFieldConfig } from './rating/rating.component';
+import { RatingFieldConfig, ColorChange } from './rating/rating.component';
 // import { RatingModule } from './rating/rating.module';
 
 
@@ -46,7 +46,8 @@ export class AppComponent implements OnInit {
       max: 100,
       step: 10,
       input: true,
-      color: ['#008000', '#ffd280', '#ffa500', '#ff0000'],
+      // color: ['#008000', '#ffd280', '#ffa500', '#ff0000'],
+      color: this.getRateColor('rgb(0, 224, 27)', 'rgb(255, 0, 0)', 5),
       theme: 'icon-block'
     };
 
@@ -72,6 +73,14 @@ export class AppComponent implements OnInit {
       input: true,
       theme: 'number-block'
     };
+  }
+
+  getRateColor(...event) {
+    if (Number.isInteger(event[2])) {
+      return ColorChange(event[0], event[1], event[2]);
+    } else {
+      return event;
+    }
   }
 
   onFaoRate($event) {

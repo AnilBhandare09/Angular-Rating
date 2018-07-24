@@ -20,9 +20,7 @@
       [min]="ratingNumber.min" [step]="ratingNumber.step" [input]="ratingNumber.input"></app-rating>
   
       <!-- For Dropdown Rating -->
-    <app-rating [(ngModel)]="ratingDrop.value" [theme]="ratingNumber.theme" [title]="ratingDrop.title" [color]="ratingDrop.color"
-      [type]="ratingDrop.type" [max]="ratingDrop.max" (rateChange)="onRatingDrop($event)" [min]="ratingDrop.min" [step]="ratingDrop.step"
-      [input]="ratingDrop.input"></app-rating>
+    <app-rating [(ngModel)]="ratingDrop.value" [theme]="ratingNumber.theme" [title]="ratingDrop.title" [type]="ratingDrop.type" [max]="ratingDrop.max" (rateChange)="onRatingDrop($event)" [min]="ratingDrop.min" [input]="ratingDrop.input"></app-rating>
       
   </mat-card-content>
 </mat-card>
